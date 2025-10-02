@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal B.Mandarin 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        .quiz-container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 28px;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .quiz-container img {
+            display: block;
+            margin: 0 auto 15px auto;
+            max-width: 140px;
+            height: auto;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+            margin: 10px 0;
+        }
+        .section-title {
+            text-align: left;
+            color: darkblue;
+            margin-top: 30px;
+        }
+        .question {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .question h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+            line-height: 1.5;
+            font-size: 18px; /* perkecil ukuran font soal */
+        }
+        .options label {
+            display: block;
+            margin-bottom: 6px;
+            cursor: pointer;
+            padding: 4px 6px;
+            border-radius: 4px;
+            font-size: 18px; /* perkecil ukuran font jawaban */
+        }
+        .options input[type="radio"] {
+            margin-right: 8px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        #result {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+        #review {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: #fafafa;
+            text-align: left;
+            font-size: 18px; /* review juga sedikit lebih kecil */
+        }
+        .correct {
+            color: green;
+            font-weight: bold;
+        }
+        .wrong {
+            color: red;
+            font-weight: bold;
+        }
+        @media (max-width: 480px) {
+            .quiz-container { padding: 16px; }
+            .quiz-container img { max-width: 100px; }
+            .question h3 { font-size: 15px; }
+            .options label { font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <img src="SD.png" alt="logo" width="100" height="99">
+        <h1>三年级汉语第三课练习题</h1>
+        <h2>Soal latihan B. Mandarin Kelas III Bab. 3</h2>
+        <h2 class="section-title">选择题 Pilihan ganda</h2>
+        <form id="quiz-form"></form>
+        <div id="result"></div>
+        <div id="review"></div>
+        <button id="retry-btn" style="display:none;">Ulangi Soal</button>
+    </div>
+
+    <script>
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        const questions = [
+            {
+                question: "老师lǎo shī ......",
+                options: [
+                    { text: "guru", correct: true },
+                    { text: "polisi", correct: false },
+                    { text: "dokter", correct: false },
+                    { text: "pengusaha", correct: false }
+                ]
+            },
+            {
+                question: "Dokter ......",
+                options: [
+                    { text: "医生 yī shēnɡ", correct: true },
+                    { text: "老师 lǎo shī", correct: false },
+                    { text: "警察 jǐnɡ chá", correct: false },
+                    { text: "工人 ɡōnɡ rén", correct: false }
+                ]
+            },
+            {
+                question: "Polisi ......",
+                options: [
+                    { text: "警察 jǐnɡ chá", correct: true },
+                    { text: "医生 yī shēnɡ", correct: false },
+                    { text: "老师 lǎo shī", correct: false },
+                    { text: "商人 shānɡ rén", correct: false }
+                ]
+            },
+            {
+                question: "弟弟 dì di ......",
+                options: [
+                    { text: "adik laki-laki", correct: true },
+                    { text: "adik perempuan", correct: false },
+                    { text: "paman", correct: false },
+                    { text: "bibi", correct: false }
+                ]
+            },
+            {
+                question: "Adik perempuan ......",
+                options: [
+                    { text: "妹妹 mèi mei", correct: true },
+                    { text: "弟弟 dì di", correct: false },
+                    { text: "叔叔 shū shu", correct: false },
+                    { text: "姐姐 jiě jie", correct: false }
+                ]
+            },
+            {
+                question: "Paman ......",
+                options: [
+                    { text: "叔叔 shū shu", correct: true },
+                    { text: "弟弟 dì di", correct: false },
+                    { text: "妹妹 mèi mei", correct: false },
+                    { text: "哥哥 gē ge", correct: false }
+                ]
+            },
+            {
+                question: "Mereka ......",
+                options: [
+                    { text: "他们 tā men", correct: true },
+                    { text: "我们 wǒ men", correct: false },
+                    { text: "你们 nǐ men", correct: false },
+                    { text: "他 tā", correct: false }
+                ]
+            },
+            {
+                question: "Kalian ......",
+                options: [
+                    { text: "你们 nǐ men", correct: true },
+                    { text: "我们 wǒ men", correct: false },
+                    { text: "他们 tā men", correct: false },
+                    { text: "你 nǐ", correct: false }
+                ]
+            },
+            {
+                question: "Kami ......",
+                options: [
+                    { text: "我们 wǒ men", correct: true },
+                    { text: "你们 nǐ men", correct: false },
+                    { text: "他们 tā men", correct: false },
+                    { text: "我 wǒ", correct: false }
+                ]
+            },
+            {
+                question: "Pekerja ......",
+                options: [
+                    { text: "工人 ɡōnɡ rén", correct: true },
+                    { text: "学生 xué shenɡ", correct: false },
+                    { text: "商人 shānɡ rén", correct: false },
+                    { text: "老师 lǎo shī", correct: false }
+                ]
+            },
+            {
+                question: "Pengusaha/pedagang ......",
+                options: [
+                    { text: "商人 shānɡ rén", correct: true },
+                    { text: "学生 xué shenɡ", correct: false },
+                    { text: "工人 ɡōnɡ rén", correct: false },
+                    { text: "医生 yī shēnɡ", correct: false }
+                ]
+            },
+            {
+                question: "学生 xué shenɡ ......",
+                options: [
+                    { text: "murid", correct: true },
+                    { text: "pekerja", correct: false },
+                    { text: "pengusaha", correct: false },
+                    { text: "guru", correct: false }
+                ]
+            },
+            {
+                question: "Dia ......",
+                options: [
+                    { text: "他 tā", correct: true },
+                    { text: "你 nǐ", correct: false },
+                    { text: "吗 ma", correct: false },
+                    { text: "我 wǒ", correct: false }
+                ]
+            },
+            {
+                question: "你 nǐ ......",
+                options: [
+                    { text: "kamu", correct: true },
+                    { text: "dia", correct: false },
+                    { text: "apakah", correct: false },
+                    { text: "saya", correct: false }
+                ]
+            },
+            {
+                question: "Apakah ......",
+                options: [
+                    { text: "吗 ma", correct: true },
+                    { text: "你 nǐ", correct: false },
+                    { text: "他 tā", correct: false },
+                    { text: "什么 shén me", correct: false }
+                ]
+            },
+            {
+                question: "你妈妈是老师吗？nǐ mā ma shì lǎo shī ma",
+                options: [
+                    { text: "Apakah ibu kamu adalah guru?", correct: true },
+                    { text: "Apakah ayah kamu adalah guru?", correct: false },
+                    { text: "Ibu saya bukan guru.", correct: false },
+                    { text: "Ibu kamu adalah guru.", correct: false }
+                ]
+            },
+            {
+                question: "我爸爸不是医生。wǒ bà ba bú shì yī shēnɡ",
+                options: [
+                    { text: "Ayah saya bukan dokter.", correct: true },
+                    { text: "Ayah saya adalah dokter.", correct: false },
+                    { text: "Ayah saya bukan guru.", correct: false },
+                    { text: "Ayah saya adalah guru.", correct: false }
+                ]
+            },
+            {
+                question: "叔叔不是警察。shū shu bú shì jǐnɡ chá",
+                options: [
+                    { text: "Paman bukan polisi.", correct: true },
+                    { text: "Paman adalah polisi.", correct: false },
+                    { text: "Paman bukan pengusaha.", correct: false },
+                    { text: "Paman adalah dokter.", correct: false }
+                ]
+            },
+            {
+                question: "Ayah adalah guru.",
+                options: [
+                    { text: "爸爸是老师。bà ba shì lǎo shī", correct: true },
+                    { text: "爸爸是医生。bà ba shì yī shēnɡ", correct: false },
+                    { text: "爸爸是商人。bà ba shì shānɡ rén", correct: false },
+                    { text: "爸爸是警察。bà ba shì jǐnɡ chá", correct: false }
+                ]
+            },
+            {
+                question: "Saya adalah murid.",
+                options: [
+                    { text: "我是学生。wǒ shì xué shenɡ", correct: true },
+                    { text: "我不是学生。wǒ bú shì xué shenɡ", correct: false },
+                    { text: "他是学生。tā shì xué shenɡ", correct: false },
+                    { text: "他不是学生。tā bú shì xué shenɡ", correct: false }
+                ]
+            }
+        ];
+
+        function renderQuiz() {
+            const form = document.getElementById("quiz-form");
+            form.innerHTML = "";
+            shuffle(questions).forEach((q, idx) => {
+                const div = document.createElement("div");
+                div.classList.add("question");
+
+                const h3 = document.createElement("h3");
+                h3.innerHTML = `${idx + 1}. ${q.question}`;
+                div.appendChild(h3);
+
+                const optionsDiv = document.createElement("div");
+                optionsDiv.classList.add("options");
+
+                shuffle(q.options).forEach(opt => {
+                    const label = document.createElement("label");
+                    const input = document.createElement("input");
+                    input.type = "radio";
+                    input.name = `q${idx}`;
+                    input.value = opt.correct;
+                    label.appendChild(input);
+                    label.append(` ${opt.text}`);
+                    optionsDiv.appendChild(label);
+                });
+
+                div.appendChild(optionsDiv);
+                form.appendChild(div);
+            });
+
+            const btn = document.createElement("button");
+            btn.type = "submit";
+            btn.textContent = "提交 Submit";
+            form.appendChild(btn);
+
+            document.getElementById("result").textContent = "";
+            document.getElementById("review").innerHTML = "";
+            document.getElementById("retry-btn").style.display = "none";
+        }
+
+        document.addEventListener("DOMContentLoaded", renderQuiz);
+
+        document.getElementById("quiz-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            let score = 0;
+            let reviewHTML = "<h3>检查答案 Review Jawaban:</h3>";
+            questions.forEach((q, idx) => {
+                const selected = document.querySelector(`input[name="q${idx}"]:checked`);
+                const correctAnswer = q.options.find(opt => opt.correct).text;
+                if (selected && selected.value === "true") {
+                    score++;
+                    reviewHTML += `<p>${idx + 1}. ${q.question} - <span class='correct'>Benar (${correctAnswer})</span></p>`;
+                } else {
+                    const chosenText = selected ? selected.parentNode.textContent.trim() : "(tidak dijawab)";
+                    reviewHTML += `<p>${idx + 1}. ${q.question} - <span class='wrong'>Salah</span> (Jawaban Anda: ${chosenText}, Benar: ${correctAnswer})</p>`;
+                }
+            });
+            document.getElementById("result").textContent = `Skor Anda: ${score} dari ${questions.length}`;
+            document.getElementById("review").innerHTML = reviewHTML;
+            document.getElementById("retry-btn").style.display = "block";
+        });
+
+        document.getElementById("retry-btn").addEventListener("click", function() {
+            renderQuiz();
+        });
+    </script>
+</body>
+</html>
