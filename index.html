@@ -400,8 +400,8 @@
 <div class="container">
     <img src="SD.png" alt="logo sekolah" class="logo" onerror="this.style.display='none'">
 
-    <h1>三年级汉语第二学期期末考试通关练习</h1>
-    <div style="text-align: center;"><h2>✨ Soal Latihan SAS Bahasa Mandarin Kelas III Semester 2 ✨</h2></div>
+    <h1>三年级汉语第一学期第一课测验通关练习</h1>
+    <div style="text-align: center;"><h2>✨ Soal Latihan Sumatif Bahasa Mandarin Kelas III Semester 1 Bab. 1✨</h2></div>
 
     <div class="left-title">🎯 选择题 Pilihan Ganda</div>
 
@@ -431,41 +431,26 @@
 <script>
     // ---------- 原始题库，全面包含  年级知识点 ----------
     const rawQuestions = [
-		{id:1,text:"打 dǎ ......", options:["memukul","menendang","melompat","menangkap"],correct:0},
-		{id:2,text:"Menendang ......", options:["踢 tī","跳 tiào","打 dǎ","接 jiē"],correct:0},
-		{id:3,text:"球 qiú ......", options:["bola","sepatu","topi","raket"],correct:0},
-		{id:4,text:"Bola basket ......", options:["篮球 lán qiú","乒乓球pīnɡ pānɡ qiú","排球 pái qiú","足球 zú qiú"],correct:0},
-		{id:5,text:"排球 pái qiú ......", options:["bola voli","bola basket","bola sepakbola","bola pingpong"],correct:0},
-		{id:6,text:"Bola sepakbola ......", options:["足球 zú qiú","排球 pái qiú","篮球 lán qiú","乒乓球 pīnɡ pānɡ qiú"],correct:0},
-		{id:7,text:"乒乓球 pīnɡ pānɡ qiú ......", options:["bola pingpong","bola basket","bola sepakbola","bola voli"],correct:0},
-		{id:8,text:"Bermain lompat tali ......", options:["跳绳 tiào shénɡ","做题 zuò tí","回家 huí jiā","打球 dǎ qiú"],correct:0},
-		{id:9,text:"不 bù ......", options:["tidak","dia","adalah","kembali"],correct:0},
-		{id:10,text:"谁 shuí ......", options:["siapa","apa","kemana","kapan"],correct:0},
-		{id:11,text:"什么 shén me ......", options:["apa","siapa","kemana","kapan"],correct:0},
-		{id:12,text:"哪儿 nǎr ......", options:["kemana","apa","siapa","kapan"],correct:0},
-		{id:13,text:"Pergi ......", options:["去 qù","不 bù","做 zuò","回 huí"],correct:0},
-		{id:14,text:"是 shì ......", options:["adalah","mengerjakan","pulang","tidak"],correct:0},
-		{id:15,text:"Dia ......", options:["他 tā","我 wǒ","你 nǐ","谁 shuí"],correct:0},
-		{id:16,text:"一天 yī tiān ......", options:["sehari","seminggu","sebulan","setahun"],correct:0},
-		{id:17,text:"Pulang sekolah ......", options:["放学 fànɡ xué","回家 huí jiā","下班 xià bān","下课 xià kè"],correct:0},
-		{id:18,text:"回家 huí jiā ......", options:["pulang ke rumah","pulang sekolah","pulang kerja","istirahat"],correct:0},
-		{id:19,text:"Mengerjakan ......", options:["做 zuò","去 qù","学 xué","回 huí"],correct:0},
-		{id:20,text:"作业 zuò yè ......", options:["tugas/PR","ujian","catatan","menulis"],correct:0},
-		{id:21,text:"dǎ ......", options:["打","踢","排","跳"],correct:0},
-		{id:22,text:"lán qiú ......", options:["篮球","排球","足球","网球"],correct:0},
-		{id:23,text:"tī ......", options:["踢","打","排","跳"],correct:0},
-		{id:24,text:"zú qiú ......", options:["足球","篮球","排球","网球"],correct:0},
-		{id:25,text:"tiào shénɡ ......", options:["跳绳","踢球","打球","跑步"],correct:0},
-		{id:26,text:"shuí ......", options:["谁","准","唯","维"],correct:0},
-		{id:27,text:"shén me ......", options:["什么","哪儿","那么","多么"],correct:0},
-		{id:28,text:"nǎr ......", options:["哪儿","玩儿","这儿","那儿"],correct:0},
-		{id:29,text:"fànɡ xué ......", options:["放学","回家","上学","开学"],correct:0},
-		{id:30,text:"yī tiān ......", options:["一天","一年","一周","一月"],correct:0},
-		{id:31,text:"Dia adalah ayah saya. <br>tā shì wǒ bà ba", options:["他是我爸爸。","她是我妈妈。","他是我哥哥。","她是我妹妹。"],correct:0},
-		{id:32,text:"Kami bermain sepakbola. <br>wǒ men tī zú qiú", options:["我们踢足球。","我们打篮球。","我们打排球。","我不踢足球。"],correct:0},
-		{id:33,text:"Saya mengerjakan PR/tugas. <br>wǒ zuò zuò yè", options:["我做作业。","我说中文。","我写笔记。","我读课文。"],correct:0},
-		{id:34,text:"ɡē ɡe dǎ lán qiú . <br>Kakak laki-laki bermain bola <br>basket.", options:["哥哥打篮球。","哥哥打排球。","哥哥踢足球。","哥哥不跳绳。"],correct:0},
-		{id:35,text:"wǒ de yī tiān . <br>Kegiatan saya dalam sehari.", options:["我的一天。","我的书包。","我的学校。","我的足球。"],correct:0}
+		{id:1,text:"你好 nǐ hǎo ......", options:["Halo","Maaf","Terima kasih","Sampai jumpa"],correct:0},
+		{id:2,text:"你 nǐ ......", options:["Kamu","Saya","Mereka","Dia"],correct:0},
+		{id:3,text:"好 hǎo ......", options:["Baik","Mulai","Silakan","Tidak"],correct:0},
+		{id:4,text:"再见 zài jiàn ......", options:["Sampai jumpa","Halo","Maaf","Terima kasih"],correct:0},
+		{id:5,text:"Guru ......", options:["老师 lǎo shī","孩子 hái zi","朋友 pénɡ you","同学 tónɡ xué"],correct:0},
+		{id:6,text:"Teman sekolah ......", options:["同学 tónɡ xué","老师 lǎo shī","孩子 hái zi","朋友 pénɡ you"],correct:0},
+		{id:7,text:"谢谢 xiè xie ......", options:["Terima kasih","Maaf","Sama-sama","Halo"],correct:0},
+		{id:8,text:"不客气 bú kè qi ......", options:["Sama-sama","Maaf","Terima kasih","Tidak apa-apa"],correct:0},
+		{id:9,text:"对不起 duì bu qǐ ......", options:["Maaf","Sama-sama","Halo","Tidak apa-apa"],correct:0},
+		{id:10,text:"没关系 méi ɡuān xi ......", options:["Tidak apa-apa","Halo","Maaf","Sama-sama"],correct:0},
+		{id:11,text:"nǐ hǎo", options:["你好","再见","谢谢","不客气"],correct:0},
+		{id:12,text:"zài jiàn", options:["再见","你好","谢谢","对不起"],correct:0},
+		{id:13,text:"lǎo shī", options:["老师","家长","校长","学生"],correct:0},
+		{id:14,text:"tónɡ xué", options:["同学","老师","家长","同桌"],correct:0},
+		{id:15,text:"xiè xie", options:["谢谢","画画","哥哥","姐姐"],correct:0},
+		{id:16,text:"小华 ： 你好！nǐ hǎo<br>小强 ： .......", options:["你好 nǐ hǎo","再见 zài jiàn","谢谢 xiè xie","不客气 bú kè qi"],correct:0},
+		{id:17,text:"小华 ： 再见！zài jiàn<br>小强 ： .......", options:["再见 zài jiàn","你好 nǐ hǎo","不客气 bú kè qi","没关系 méi ɡuān xi"],correct:0},
+		{id:18,text:"小华 ： 谢谢 xiè xie<br>小强 ： .......", options:["不客气 bú kè qi","没关系 méi ɡuān xi","对不起 duì bu qǐ","再见 zài jiàn"],correct:0},
+		{id:19,text:"小华 ： 对不起 duì bu qǐ<br>小强 ： .......", options:["没关系 méi ɡuān xi","不客气 bú kè qi","谢谢 xiè xie","你好 nǐ hǎo"],correct:0},
+		{id:20,text:"老师 ： 同学们好！tónɡ xué men hǎo<br>同学们 ： .......", options:["老师好 lǎo shī hǎo","没关系 méi ɡuān xi","不客气 bú kè qi","对不起 duì bu qǐ"],correct:0}
     ];
 
     let currentQuestions = [];      // 存储 shuffle 之后带 shuffledOptions & shuffledCorrect 的题目
