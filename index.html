@@ -400,8 +400,8 @@
 <div class="container">
     <img src="SD.png" alt="logo sekolah" class="logo" onerror="this.style.display='none'">
 
-    <h1>三年级汉语第一学期第一课测验通关练习</h1>
-    <div style="text-align: center;"><h2>✨ Soal Latihan Sumatif Bahasa Mandarin Kelas III Semester 1 Bab. 1✨</h2></div>
+    <h1>三年级第一学期第二课汉语测验通关练习</h1>
+    <div style="text-align: center;"><h2>✨ Soal Latihan Sumatif Bahasa Mandarin Kelas III Semester 1 Bab. 2✨</h2></div>
 
     <div class="left-title">🎯 选择题 Pilihan Ganda</div>
 
@@ -431,26 +431,26 @@
 <script>
     // ---------- 原始题库，全面包含  年级知识点 ----------
     const rawQuestions = [
-		{id:1,text:"你好 nǐ hǎo ......", options:["Halo","Maaf","Terima kasih","Sampai jumpa"],correct:0},
-		{id:2,text:"你 nǐ ......", options:["Kamu","Saya","Mereka","Dia"],correct:0},
-		{id:3,text:"好 hǎo ......", options:["Baik","Mulai","Silakan","Tidak"],correct:0},
-		{id:4,text:"再见 zài jiàn ......", options:["Sampai jumpa","Halo","Maaf","Terima kasih"],correct:0},
-		{id:5,text:"Guru ......", options:["老师 lǎo shī","孩子 hái zi","朋友 pénɡ you","同学 tónɡ xué"],correct:0},
-		{id:6,text:"Teman sekolah ......", options:["同学 tónɡ xué","老师 lǎo shī","孩子 hái zi","朋友 pénɡ you"],correct:0},
-		{id:7,text:"谢谢 xiè xie ......", options:["Terima kasih","Maaf","Sama-sama","Halo"],correct:0},
-		{id:8,text:"不客气 bú kè qi ......", options:["Sama-sama","Maaf","Terima kasih","Tidak apa-apa"],correct:0},
-		{id:9,text:"对不起 duì bu qǐ ......", options:["Maaf","Sama-sama","Halo","Tidak apa-apa"],correct:0},
-		{id:10,text:"没关系 méi ɡuān xi ......", options:["Tidak apa-apa","Halo","Maaf","Sama-sama"],correct:0},
-		{id:11,text:"nǐ hǎo", options:["你好","再见","谢谢","不客气"],correct:0},
-		{id:12,text:"zài jiàn", options:["再见","你好","谢谢","对不起"],correct:0},
-		{id:13,text:"lǎo shī", options:["老师","家长","校长","学生"],correct:0},
-		{id:14,text:"tónɡ xué", options:["同学","老师","家长","同桌"],correct:0},
-		{id:15,text:"xiè xie", options:["谢谢","画画","哥哥","姐姐"],correct:0},
-		{id:16,text:"小华 ： 你好！nǐ hǎo<br>小强 ： .......", options:["你好 nǐ hǎo","再见 zài jiàn","谢谢 xiè xie","不客气 bú kè qi"],correct:0},
-		{id:17,text:"小华 ： 再见！zài jiàn<br>小强 ： .......", options:["再见 zài jiàn","你好 nǐ hǎo","不客气 bú kè qi","没关系 méi ɡuān xi"],correct:0},
-		{id:18,text:"小华 ： 谢谢 xiè xie<br>小强 ： .......", options:["不客气 bú kè qi","没关系 méi ɡuān xi","对不起 duì bu qǐ","再见 zài jiàn"],correct:0},
-		{id:19,text:"小华 ： 对不起 duì bu qǐ<br>小强 ： .......", options:["没关系 méi ɡuān xi","不客气 bú kè qi","谢谢 xiè xie","你好 nǐ hǎo"],correct:0},
-		{id:20,text:"老师 ： 同学们好！tónɡ xué men hǎo<br>同学们 ： .......", options:["老师好 lǎo shī hǎo","没关系 méi ɡuān xi","不客气 bú kè qi","对不起 duì bu qǐ"],correct:0}
+		{id:1,text:"Saya ......", options:["我 wǒ","他 tā","她 tā","是 shì"],correct:0},
+		{id:2,text:"他 tā ......", options:["dia","saya","adalah","kamu"],correct:0},
+		{id:3,text:"Adalah ......", options:["是 shì","他 tā","这 zhè","那 nà"],correct:0},
+		{id:4,text:"爸爸 bà ba ......", options:["ayah","ibu","sayang","kakek"],correct:0},
+		{id:5,text:"Ibu ......", options:["妈妈 mā ma","妹妹 mèi mei","爸爸 bà ba","哥哥 ɡē ɡe"],correct:0},
+		{id:6,text:"爱 ài ......", options:["sayang","dia","ini","melihat"],correct:0},
+		{id:7,text:"Ini ......", options:["这 zhè","那 nà","爱 ài","看 kàn"],correct:0},
+		{id:8,text:"Itu ......", options:["那 nà","这 zhè","爱 ài","看 kàn"],correct:0},
+		{id:9,text:"Adik perempuan ......", options:["妹妹 mèi mei","哥哥 ɡē ɡe","姐姐 jiě jie","弟弟 dì di"],correct:0},
+		{id:10,text:"看 kàn ......", options:["melihat","adalah","dan","pergi"],correct:0},
+		{id:11,text:"bà ba", options:["爸爸","叔叔","哥哥","爷爷"],correct:0},
+		{id:12,text:"mā ma", options:["妈妈","姐姐","妹妹","奶奶"],correct:0},
+		{id:13,text:"mèi mei", options:["妹妹","妈妈","姐姐","奶奶"],correct:0},
+		{id:14,text:"zhè", options:["这","那","是","爱"],correct:0},
+		{id:15,text:"nà", options:["那","这","是","看"],correct:0},
+		{id:16,text:"我爱爸爸妈妈。wǒ ài bà ba mā ma", options:["Saya sayang ayah dan ibu.","Saya sayang paman dan bibi.","Ayah sayang saya.","Ibu sayang saya."],correct:0},
+		{id:17,text:"我是王小华。wǒ shì wánɡ xiǎo huá", options:["Saya adalah Wang Xiaohua.","Dia adalah Wang Xiaohua.","Saya adalah murid.","Kamu adalah Wang Xiaohua."],correct:0},
+		{id:18,text:"那是我哥哥。nà shì wǒ ɡē ɡe", options:["itu adalah kakak laki-laki saya.","itu adalah adik laki-laki saya.","Ini adalah kakak perempuan saya.","Ini adalah adik perempuan saya."],correct:0},
+		{id:19,text:"Dia adalah ayah saya. tā shì wǒ bà ba", options:["他是我爸爸。","我是他爸爸。","我是你爸爸。","他是你爸爸。"],correct:0},
+		{id:20,text:"Ini adalah adik perempuan saya. zhè shì wǒ mèi mei", options:["这是我妹妹。","这是我姐姐。","那是我哥哥。","那是我弟弟。"],correct:0}
     ];
 
     let currentQuestions = [];      // 存储 shuffle 之后带 shuffledOptions & shuffledCorrect 的题目
