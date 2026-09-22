@@ -400,8 +400,8 @@
 <div class="container">
     <img src="SD.png" alt="logo sekolah" class="logo" onerror="this.style.display='none'">
 
-    <h1>三年级第一学期第二课汉语测验通关练习</h1>
-    <div style="text-align: center;"><h2>✨ Soal Latihan Sumatif Bahasa Mandarin Kelas III Semester 1 Bab. 2✨</h2></div>
+    <h1>三年级第一学期第三课汉语测验通关练习</h1>
+    <div style="text-align: center;"><h2>✨Soal Latihan Sumatif Bahasa Mandarin Kelas III Semester 1 Bab. 3✨</h2></div>
 
     <div class="left-title">🎯 选择题 Pilihan Ganda</div>
 
@@ -431,26 +431,26 @@
 <script>
     // ---------- 原始题库，全面包含  年级知识点 ----------
     const rawQuestions = [
-		{id:1,text:"Saya ......", options:["我 wǒ","他 tā","她 tā","是 shì"],correct:0},
-		{id:2,text:"他 tā ......", options:["dia","saya","adalah","kamu"],correct:0},
-		{id:3,text:"Adalah ......", options:["是 shì","他 tā","这 zhè","那 nà"],correct:0},
-		{id:4,text:"爸爸 bà ba ......", options:["ayah","ibu","sayang","kakek"],correct:0},
-		{id:5,text:"Ibu ......", options:["妈妈 mā ma","妹妹 mèi mei","爸爸 bà ba","哥哥 ɡē ɡe"],correct:0},
-		{id:6,text:"爱 ài ......", options:["sayang","dia","ini","melihat"],correct:0},
-		{id:7,text:"Ini ......", options:["这 zhè","那 nà","爱 ài","看 kàn"],correct:0},
-		{id:8,text:"Itu ......", options:["那 nà","这 zhè","爱 ài","看 kàn"],correct:0},
-		{id:9,text:"Adik perempuan ......", options:["妹妹 mèi mei","哥哥 ɡē ɡe","姐姐 jiě jie","弟弟 dì di"],correct:0},
-		{id:10,text:"看 kàn ......", options:["melihat","adalah","dan","pergi"],correct:0},
-		{id:11,text:"bà ba", options:["爸爸","叔叔","哥哥","爷爷"],correct:0},
-		{id:12,text:"mā ma", options:["妈妈","姐姐","妹妹","奶奶"],correct:0},
-		{id:13,text:"mèi mei", options:["妹妹","妈妈","姐姐","奶奶"],correct:0},
-		{id:14,text:"zhè", options:["这","那","是","爱"],correct:0},
-		{id:15,text:"nà", options:["那","这","是","看"],correct:0},
-		{id:16,text:"我爱爸爸妈妈。wǒ ài bà ba mā ma", options:["Saya sayang ayah dan ibu.","Saya sayang paman dan bibi.","Ayah sayang saya.","Ibu sayang saya."],correct:0},
-		{id:17,text:"我是王小华。wǒ shì wánɡ xiǎo huá", options:["Saya adalah Wang Xiaohua.","Dia adalah Wang Xiaohua.","Saya adalah murid.","Kamu adalah Wang Xiaohua."],correct:0},
-		{id:18,text:"那是我哥哥。nà shì wǒ ɡē ɡe", options:["itu adalah kakak laki-laki saya.","itu adalah adik laki-laki saya.","Ini adalah kakak perempuan saya.","Ini adalah adik perempuan saya."],correct:0},
-		{id:19,text:"Dia adalah ayah saya. tā shì wǒ bà ba", options:["他是我爸爸。","我是他爸爸。","我是你爸爸。","他是你爸爸。"],correct:0},
-		{id:20,text:"Ini adalah adik perempuan saya. zhè shì wǒ mèi mei", options:["这是我妹妹。","这是我姐姐。","那是我哥哥。","那是我弟弟。"],correct:0}
+		{id:1,text:"老师 lǎo shī ......", options:["guru","polisi","pengusaha","dokter"],correct:0},
+		{id:2,text:"Dokter ......", options:["医生 yī shēnɡ","警察 jǐnɡ chá","老师 lǎo shī","商人 shānɡ rén"],correct:0},
+		{id:3,text:"弟弟 dì di ......", options:["adik laki-laki","kakak laki-laki","adik perempuan","kakak perempuan"],correct:0},
+		{id:4,text:"Mereka ......", options:["他们 tā men","我们 wǒ men","你们 nǐ men","大门 dà mén"],correct:0},
+		{id:5,text:"Kalian ......", options:["你们 nǐ men","我们 wǒ men","他们 tā men","你家 nǐ jiā"],correct:0},
+		{id:6,text:"Kami ......", options:["我们 wǒ men","你们 nǐ men","他们 tā men","大家 dà jiā"],correct:0},
+		{id:7,text:"Pekerja ......", options:["工人 ɡōnɡ rén","学生 xué shenɡ","老师 lǎo shī","商人 shānɡ rén"],correct:0},
+		{id:8,text:"Pengusaha/pedagang ......", options:["商人 shānɡ rén","学生 xué shenɡ","工人 ɡōnɡ rén","警察 jǐnɡ chá"],correct:0},
+		{id:9,text:"学生 xué shenɡ ......", options:["murid","guru","pekerja","pengusaha"],correct:0},
+		{id:10,text:"Apakah ......", options:["吗 ma","你 nǐ","吧 ba","他 tā"],correct:0},
+		{id:11,text:"lǎo shī ......", options:["老师","学生","商人","警察"],correct:0},
+		{id:12,text:"yī shēnɡ ......", options:["医生","警察","商人","工人"],correct:0},
+		{id:13,text:"xué shenɡ ......", options:["学生","老师","工人","医生"],correct:0},
+		{id:14,text:"shānɡ rén ......", options:["商人","工人","学生","医生"],correct:0},
+		{id:15,text:"ɡōnɡ rén ......", options:["工人","商人","警察","老师"],correct:0},
+		{id:16,text:"nǐ mā ma shì lǎo shī ma<br>你妈妈是老师吗？", options:["Apakah ibumu seorang guru?","Apakah ibumu seorang dokter?","Apakah ayahmu seorang polisi?","Apakah ayahmu seorang pengusaha?"],correct:0},
+		{id:17,text:"wǒ bà ba bú shì yī shēnɡ<br>我爸爸不是医生。", options:["Ayah saya bukan dokter.","Ayah saya bukan polisi.","Ibu saya bukan guru.","Ibu saya bukan dokter."],correct:0},
+		{id:18,text:"shū shu bú shì jǐnɡ chá<br>叔叔不是警察。", options:["Paman bukan polisi.","Paman bukan pengusaha.","Paman bukan guru.","Paman adalah seorang dokter."],correct:0},
+		{id:19,text:"Ayah adalah guru.<br>bà ba shì lǎo shī", options:["爸爸是老师。","爸爸是医生。","爸爸是警察。","爸爸是商人。"],correct:0},
+		{id:20,text:"Saya adalah murid.<br>wǒ shì xué shenɡ", options:["我是学生。","我是工人。","我是警察。","我是医生。"],correct:0}
     ];
 
     let currentQuestions = [];      // 存储 shuffle 之后带 shuffledOptions & shuffledCorrect 的题目
