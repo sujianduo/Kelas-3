@@ -400,8 +400,8 @@
 <div class="container">
     <img src="SD.png" alt="logo sekolah" class="logo" onerror="this.style.display='none'">
 
-    <h1>三年级第一学期第四课汉语测验通关练习</h1>
-    <div style="text-align: center;"><h2>✨Soal Latihan Sumatif Bahasa Mandarin Kelas III Semester 1 Bab. 4✨</h2></div>
+    <h1>四年级汉语第一学期第四课测验通关练习</h1>
+    <div style="text-align: center;"><h2>✨Soal Latihan Sumatif Bahasa Mandarin Kelas IV Semester 1 Bab. 4✨</h2></div>
 
     <div class="left-title">🎯 选择题 Pilihan Ganda</div>
 
@@ -431,27 +431,26 @@
 <script>
     // ---------- 原始题库，全面包含  年级知识点 ----------
     const rawQuestions = [
-		{id:1,text:"叫 jiào ......", options:["memanggil / bernama","berumur","nama","nama keluarga"],correct:0},
-		{id:2,text:"Apa ......", options:["什么 shén me","叫 jiào","岁 suì","名字 mínɡ zi"],correct:0},
-		{id:3,text:"名字 mínɡ zi ......", options:["nama","umur","memanggil / bernama","nama keluarga"],correct:0},
-		{id:4,text:"Marga / nama keluarga ......", options:["姓 xìnɡ","岁 suì","叫 jiào","几 jǐ"],correct:0},
-		{id:5,text:"哥哥 ɡē ɡe ......", options:["kakak laki-laki","kakak perempuan","adik laki-laki","adik perempuan"],correct:0},
-		{id:6,text:"Kakak perempuan ......", options:["姐姐 jiě jie","哥哥 ɡē ɡe","弟弟 dì di","妹妹 mèi mei"],correct:0},
-		{id:7,text:"几 jǐ ......", options:["berapa","kapan","apa","siapa"],correct:0},
-		{id:8,text:"Tahun usia ......", options:["岁 suì","姓 xìnɡ","也 yě","几 jǐ"],correct:0},
-		{id:9,text:"也 yě ......", options:["juga","berapa","marga","tahun usia"],correct:0},
-		{id:10,text:"Kamu ......", options:["你 nǐ","叫 jiào","他 tā","我 wǒ"],correct:0},
-		{id:11,text:"mínɡ zi", options:["名字","老师","学生","什么"],correct:0},
-		{id:12,text:"shén me", options:["什么","名字","学生","学校"],correct:0},
-		{id:13,text:"ɡē ɡe", options:["哥哥","姐姐","弟弟","妹妹"],correct:0},
-		{id:14,text:"jiě jie", options:["姐姐","哥哥","弟弟","妹妹"],correct:0},
-		{id:15,text:"dì di", options:["弟弟","妹妹","姐姐","哥哥"],correct:0},
-		{id:16,text:"你叫什么名字？ nǐ jiào shén me mínɡ zi", options:["Siapa nama kamu?","Berapa umur kamu?","Kamu kelas berapa?","Dimana rumah kamu?"],correct:0},
-		{id:17,text:"我叫王小华。 wǒ jiào wánɡ xiǎo huá", options:["Saya bernama Wang Xiaohua.","Adik laki-laki saya bernama Wang Xiaohua.","Saya berumur 9 tahun.","Saya bermarga Wang."],correct:0},
-		{id:18,text:"你几岁？ nǐ jǐ suì", options:["Kamu berumur berapa tahun?","Siapa nama kamu?","Kamu kelas berapa?","Dimana rumah kamu?"],correct:0},
-		{id:19,text:"你叫什么名字？ nǐ jiào shén me mínɡ zi", options:["我叫王小华。","我九岁。","我姓王。","我有书。"],correct:0},
-		{id:20,text:"你几岁？ nǐ jǐ suì", options:["我九岁。","我姓王。","我有书。","我在家。"],correct:0},
-		{id:21,text:"我九岁。 wǒ jiǔ suì", options:["Saya berumur 9 tahun.","Saya berumur 10 tahun.","Saya berumur 8 tahun.","Saya berumur 7 tahun."],correct:0}
+		{id:1,text:"上 shànɡ ......", options:["atas","bawah","kiri","kanan"],correct:0},
+		{id:2,text:"Di bawah ......", options:["下边 xià biān","上边 shànɡ biān","左边 zuǒ biān","右边 yòu biān"],correct:0},
+		{id:3,text:"左边 zuǒ biān ......", options:["sebelah kiri","sebelah kanan","di atas","di bawah"],correct:0},
+		{id:4,text:"Sebelah kanan ......", options:["右边 yòu biān","左边 zuǒ biān","下边 xià biān","上边 shànɡ biān"],correct:0},
+		{id:5,text:"在 zài ......", options:["di","ke","kemana","kepada"],correct:0},
+		{id:6,text:"图书馆 tú shū ɡuǎn ......", options:["perpustakaan","sekolah","rak buku","meja"],correct:0},
+		{id:7,text:"Rak buku ......", options:["书架 shū jià","书包 shū bāo","桌子 zhuō zi","教室 jiào shì"],correct:0},
+		{id:8,text:"桌子 zhuō zi ......", options:["meja","rak buku","sekolah","perpustakaan"],correct:0},
+		{id:9,text:"哪儿 nǎ er ......", options:["dimana","siapa","apakah","berapa"],correct:0},
+		{id:10,text:"Ruang kelas ......", options:["教室 jiào shì","桌子 zhuō zi","书架 shū jià","书包 shū bāo"],correct:0},
+		{id:11,text:"shū jià", options:["书架","课桌","白板","电脑"],correct:0},
+		{id:12,text:"nǎ er", options:["哪儿","什么","多少","这儿"],correct:0},
+		{id:13,text:"jiào shì", options:["教室","厕所","食堂","操场"],correct:0},
+		{id:14,text:"tú shū ɡuǎn", options:["图书馆","办公室","洗手间","实验室"],correct:0},
+		{id:15,text:"xià biān", options:["下边","上边","左边","右边"],correct:0},
+		{id:16,text:"jiàoshì zài túshūɡuǎn zuǒbiān<br>教 室 在 图 书 馆 左 边 。", options:["Ruang kelas di sebeleh kiri perpustakaan.","Ruang kelas di sebeleh kiri kantor.","Ruang kelas di sebeleh kiri UKS.","Ruang kelas di sebeleh kanan perpustakaan."],correct:0},
+		{id:17,text:"mèimei zài māma de yòubiān<br>妹 妹 在 妈 妈 的 右 边 。", options:["Adik perempuan di sebelah kanan ibu.","Adik perempuan di sebelah kiri ibu.","Kakak perempuan di sebelah kanan ibu.","Kakak perempuan di sebelah kiri ibu."],correct:0},
+		{id:18,text:"shūbāo zài zhuōzi xiàbiān<br>书 包 在 桌 子 下 边 。", options:["Tas sekolah di bawah meja.","Tas sekolah di atas meja.","Tas sekolah di bawah kursi.","Tas sekolah di atas kursi."],correct:0},
+		{id:19,text:"Buku di (atas) rak buku.<br>shū zài shū jià shànɡ", options:["书在书架上。","书在课桌上。","书在书包里。","笔在桌子上。"],correct:0},
+		{id:20,text:"Perpustakaan di mana?<br>tú shū ɡuǎn zài nǎ er", options:["图书馆在哪儿？","实验室在哪儿？","办公室在哪儿？","洗手间在哪儿？"],correct:0}
     ];
 
     let currentQuestions = [];      // 存储 shuffle 之后带 shuffledOptions & shuffledCorrect 的题目
