@@ -400,8 +400,8 @@
 <div class="container">
     <img src="SD.png" alt="logo sekolah" class="logo" onerror="this.style.display='none'">
 
-    <h1>三年级第一学期第四课汉语测验通关练习</h1>
-    <div style="text-align: center;"><h2>✨Soal Latihan Sumatif Bahasa Mandarin Kelas III Semester 1 Bab. 4✨</h2></div>
+    <h1>三年级汉语第一学期第五课测验通关练习</h1>
+    <div style="text-align: center;"><h2>✨Soal Latihan Sumatif Bahasa Mandarin Kelas III Semester 1 Bab. 5✨</h2></div>
 
     <div class="left-title">🎯 选择题 Pilihan Ganda</div>
 
@@ -431,27 +431,26 @@
 <script>
     // ---------- 原始题库，全面包含  年级知识点 ----------
     const rawQuestions = [
-		{id:1,text:"叫 jiào ......", options:["memanggil / bernama","berumur","nama","nama keluarga"],correct:0},
-		{id:2,text:"Apa ......", options:["什么 shén me","叫 jiào","岁 suì","名字 mínɡ zi"],correct:0},
-		{id:3,text:"名字 mínɡ zi ......", options:["nama","umur","memanggil / bernama","nama keluarga"],correct:0},
-		{id:4,text:"Marga / nama keluarga ......", options:["姓 xìnɡ","岁 suì","叫 jiào","几 jǐ"],correct:0},
-		{id:5,text:"哥哥 ɡē ɡe ......", options:["kakak laki-laki","kakak perempuan","adik laki-laki","adik perempuan"],correct:0},
-		{id:6,text:"Kakak perempuan ......", options:["姐姐 jiě jie","哥哥 ɡē ɡe","弟弟 dì di","妹妹 mèi mei"],correct:0},
-		{id:7,text:"几 jǐ ......", options:["berapa","kapan","apa","siapa"],correct:0},
-		{id:8,text:"Tahun usia ......", options:["岁 suì","姓 xìnɡ","也 yě","几 jǐ"],correct:0},
-		{id:9,text:"也 yě ......", options:["juga","berapa","marga","tahun usia"],correct:0},
-		{id:10,text:"Kamu ......", options:["你 nǐ","叫 jiào","他 tā","我 wǒ"],correct:0},
-		{id:11,text:"mínɡ zi", options:["名字","老师","学生","什么"],correct:0},
-		{id:12,text:"shén me", options:["什么","名字","学生","学校"],correct:0},
-		{id:13,text:"ɡē ɡe", options:["哥哥","姐姐","弟弟","妹妹"],correct:0},
-		{id:14,text:"jiě jie", options:["姐姐","哥哥","弟弟","妹妹"],correct:0},
-		{id:15,text:"dì di", options:["弟弟","妹妹","姐姐","哥哥"],correct:0},
-		{id:16,text:"你叫什么名字？ nǐ jiào shén me mínɡ zi", options:["Siapa nama kamu?","Berapa umur kamu?","Kamu kelas berapa?","Dimana rumah kamu?"],correct:0},
-		{id:17,text:"我叫王小华。 wǒ jiào wánɡ xiǎo huá", options:["Saya bernama Wang Xiaohua.","Adik laki-laki saya bernama Wang Xiaohua.","Saya berumur 9 tahun.","Saya bermarga Wang."],correct:0},
-		{id:18,text:"你几岁？ nǐ jǐ suì", options:["Kamu berumur berapa tahun?","Siapa nama kamu?","Kamu kelas berapa?","Dimana rumah kamu?"],correct:0},
-		{id:19,text:"你叫什么名字？ nǐ jiào shén me mínɡ zi", options:["我叫王小华。","我九岁。","我姓王。","我有书。"],correct:0},
-		{id:20,text:"你几岁？ nǐ jǐ suì", options:["我九岁。","我姓王。","我有书。","我在家。"],correct:0},
-		{id:21,text:"我九岁。 wǒ jiǔ suì", options:["Saya berumur 9 tahun.","Saya berumur 10 tahun.","Saya berumur 8 tahun.","Saya berumur 7 tahun."],correct:0}
+		{id:1,text:"家 jiā ......", options:["keluarga / rumah","ayah","nenek","sayang"],correct:0},
+		{id:2,text:"Ada / punya ......", options:["有 yǒu","这 zhè","是 shì","爱 ài"],correct:0},
+		{id:3,text:"爷爷 yé ye ......", options:["kakek","nenek","paman","bibi"],correct:0},
+		{id:4,text:"Nenek ......", options:["奶奶 nǎi nai","爷爷 yé ye","叔叔 shū shu","姑姑 ɡū ɡu"],correct:0},
+		{id:5,text:"爱 ài ......", options:["sayang","laut","bunga","keluarga"],correct:0},
+		{id:6,text:"Ikan ......", options:["鱼 yú","花 huā","海 hǎi","家 jiā"],correct:0},
+		{id:7,text:"海 hǎi ......", options:["laut","ikan","bunga","bumi"],correct:0},
+		{id:8,text:"Bunga ......", options:["花 huā","鱼 yú","海 hǎi","家 jiā"],correct:0},
+		{id:9,text:"这 zhè ......", options:["ini","berapa","adalah","dan"],correct:0},
+		{id:10,text:"Berapa ......", options:["几 jǐ","这 zhè","和 hé","是 shì"],correct:0},
+		{id:11,text:"jiā", options:["家","爱","爷","奶"],correct:0},
+		{id:12,text:"yé ye", options:["爷爷","奶奶","叔叔","姑姑"],correct:0},
+		{id:13,text:"nǎi nai", options:["奶奶","爷爷","叔叔","姑姑"],correct:0},
+		{id:14,text:"yú", options:["鱼","鸟","牛","马"],correct:0},
+		{id:15,text:"hǎi", options:["海","天","河","地"],correct:0},
+		{id:16,text:"wǒ ài wǒ de jiā<br>我 爱 我 的 家 。", options:["Saya sayang keluarga saya.","Saya sayang teman-teman.","Saya sayang ayah saya.","Saya sayang ibu saya."],correct:0},
+		{id:17,text:"dà hǎi shì xiǎo yú de jiā<br>大 海 是 小 鱼 的 家 。", options:["Laut adalah rumah ikan.","Laut adalah rumah bunga.","Ini adalah rumah saya.","Laut adalah tempat mencari ikan."],correct:0},
+		{id:18,text:"wǒ jiā yǒu wǔ kǒu rén<br>我 家 有 五 口 人 。", options:["Keluarga saya ada 5 orang.","Keluarga saya ada 4 orang.","Keluarga saya ada 6 orang.","Keluarga saya ada 8 orang."],correct:0},
+		{id:19,text:"zhè shì wǒ de jiā<br>Ini adalah keluarga saya.", options:["这是我的家。","这是我的书。","这是我的笔。","这是他的家。"],correct:0},
+		{id:20,text:"zhè shì wǒ mā ma<br>Ini adalah ibu saya.", options:["这是我妈妈。","这是我爸爸。","这是我爷爷。","这是我奶奶。"],correct:0}
     ];
 
     let currentQuestions = [];      // 存储 shuffle 之后带 shuffledOptions & shuffledCorrect 的题目
