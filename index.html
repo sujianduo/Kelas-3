@@ -3,25 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>考试模拟练习 | 趣味闯关</title>
+    <title>考试模拟练习 | Latihan SAS Bahasa Mandarin Kelas 3</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            /* 系统优先字体，适应手机/电脑，保证可读性 */
             font-family: system-ui, 'Segoe UI', 'Poppins', 'Roboto', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
         }
 
         body {
-            /* 统一浅蓝色背景整体氛围，从柔和的天蓝到通透的水蓝 */
             background: linear-gradient(135deg, #c2e0ff 0%, #b3d9ff 100%);
             min-height: 100vh;
             padding: 30px 20px;
             position: relative;
         }
 
-        /* 装饰光晕元素，依然保持浅蓝氛围 */
         body::before {
             content: "";
             position: fixed;
@@ -48,11 +45,10 @@
             z-index: 0;
         }
 
-        /* 主卡片容器为浅蓝白色调，保证在统一蓝色背景中仍有层次感且舒适 */
         .container {
             max-width: 950px;
             margin: 0 auto;
-            background: #eef6fe;   /* 浅蓝底色，与body背景协奏但更亮 */
+            background: #eef6fe;
             backdrop-filter: blur(2px);
             border-radius: 48px;
             box-shadow: 0 25px 50px -12px rgba(0, 40, 70, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.7) inset;
@@ -111,7 +107,6 @@
             background: none;
         }
 
-        /* 进度条 */
         .progress-bar {
             height: 10px;
             background-color: #cae4f5;
@@ -129,7 +124,6 @@
             box-shadow: 0 0 6px #7bdaa4;
         }
 
-        /* 题目卡片：半透白，保持清爽 */
         .question {
             margin-bottom: 28px;
             padding: 22px 24px;
@@ -232,7 +226,6 @@
             font-weight: bold;
         }
 
-        /* 按钮组 */
         .controls {
             display: flex;
             justify-content: center;
@@ -274,7 +267,6 @@
             box-shadow: 0 6px 14px rgba(0,0,0,0.05);
         }
 
-        /* 结果面板调整为轻柔蓝色背景 */
         .result {
             text-align: center;
             padding: 32px 28px;
@@ -336,7 +328,6 @@
             color: #146b3a;
         }
 
-        /* 完全响应式 + 字体自适应增强 */
         @media (max-width: 650px) {
             .container {
                 padding: 20px 18px;
@@ -366,7 +357,6 @@
             }
         }
 
-        /* 确保所有文字在任何设备上都清晰可读 */
         .fineprint {
             text-align: center;
             margin-top: 25px;
@@ -381,7 +371,6 @@
         .option {
             word-break: break-word;
         }
-        /* 针对可能的小字号加强 */
         @media (max-width: 480px) {
             .option {
                 font-size: 0.85rem;
@@ -399,9 +388,8 @@
 <body>
 <div class="container">
     <img src="SD.png" alt="logo sekolah" class="logo" onerror="this.style.display='none'">
-
-    <h1>三年级汉语第一学期第五课测验通关练习</h1>
-    <div style="text-align: center;"><h2>✨Soal Latihan Sumatif Bahasa Mandarin Kelas III Semester 1 Bab. 5✨</h2></div>
+	
+    <div style="text-align: center;"><h2>✨Latihan Soal SAS Bahasa Mandarin Kelas III Semester Ganjil✨</h2></div>
 
     <div class="left-title">🎯 选择题 Pilihan Ganda</div>
 
@@ -429,35 +417,48 @@
 </div>
 
 <script>
-    // ---------- 原始题库，全面包含  年级知识点 ----------
     const rawQuestions = [
-		{id:1,text:"家 jiā ......", options:["keluarga / rumah","ayah","nenek","sayang"],correct:0},
-		{id:2,text:"Ada / punya ......", options:["有 yǒu","这 zhè","是 shì","爱 ài"],correct:0},
-		{id:3,text:"爷爷 yé ye ......", options:["kakek","nenek","paman","bibi"],correct:0},
-		{id:4,text:"Nenek ......", options:["奶奶 nǎi nai","爷爷 yé ye","叔叔 shū shu","姑姑 ɡū ɡu"],correct:0},
-		{id:5,text:"爱 ài ......", options:["sayang","laut","bunga","keluarga"],correct:0},
-		{id:6,text:"Ikan ......", options:["鱼 yú","花 huā","海 hǎi","家 jiā"],correct:0},
-		{id:7,text:"海 hǎi ......", options:["laut","ikan","bunga","bumi"],correct:0},
-		{id:8,text:"Bunga ......", options:["花 huā","鱼 yú","海 hǎi","家 jiā"],correct:0},
-		{id:9,text:"这 zhè ......", options:["ini","berapa","adalah","dan"],correct:0},
-		{id:10,text:"Berapa ......", options:["几 jǐ","这 zhè","和 hé","是 shì"],correct:0},
-		{id:11,text:"jiā", options:["家","爱","爷","奶"],correct:0},
-		{id:12,text:"yé ye", options:["爷爷","奶奶","叔叔","姑姑"],correct:0},
-		{id:13,text:"nǎi nai", options:["奶奶","爷爷","叔叔","姑姑"],correct:0},
-		{id:14,text:"yú", options:["鱼","鸟","牛","马"],correct:0},
-		{id:15,text:"hǎi", options:["海","天","河","地"],correct:0},
-		{id:16,text:"wǒ ài wǒ de jiā<br>我 爱 我 的 家 。", options:["Saya sayang keluarga saya.","Saya sayang teman-teman.","Saya sayang ayah saya.","Saya sayang ibu saya."],correct:0},
-		{id:17,text:"dà hǎi shì xiǎo yú de jiā<br>大 海 是 小 鱼 的 家 。", options:["Laut adalah rumah ikan.","Laut adalah rumah bunga.","Ini adalah rumah saya.","Laut adalah tempat mencari ikan."],correct:0},
-		{id:18,text:"wǒ jiā yǒu wǔ kǒu rén<br>我 家 有 五 口 人 。", options:["Keluarga saya ada 5 orang.","Keluarga saya ada 4 orang.","Keluarga saya ada 6 orang.","Keluarga saya ada 8 orang."],correct:0},
-		{id:19,text:"zhè shì wǒ de jiā<br>Ini adalah keluarga saya.", options:["这是我的家。","这是我的书。","这是我的笔。","这是他的家。"],correct:0},
-		{id:20,text:"zhè shì wǒ mā ma<br>Ini adalah ibu saya.", options:["这是我妈妈。","这是我爸爸。","这是我爷爷。","这是我奶奶。"],correct:0}
+        {id: 1, text: "你好 nǐ hǎo ......", options: ["Halo", "Terima kasih", "Maaf", "Sampai jumpa"], correct: 0},
+        {id: 2, text: "再见 zài jiàn ......", options: ["Sampai jumpa", "Halo", "Terima kasih", "Maaf"], correct: 0},
+        {id: 3, text: "Guru ......", options: ["老师 lǎo shī", "孩子 hái zi", "朋友 pénɡ you", "同学 tónɡ xué"], correct: 0},
+        {id: 4, text: "谢谢 xiè xie ......", options: ["Terima kasih", "Maaf", "Halo", "Sama-sama"], correct: 0},
+        {id: 5, text: "不客气 bú kè qi ......", options: ["Sama-sama", "Maaf", "Terima kasih", "Tidak apa-apa"], correct: 0},
+        {id: 6, text: "Saya ......", options: ["我 wǒ", "他 tā", "是 shì", "她 tā"], correct: 0},
+        {id: 7, text: "Adalah ......", options: ["是 shì", "他 tā", "这 zhè", "那 nà"], correct: 0},
+        {id: 8, text: "爸爸 bà ba ......", options: ["ayah", "ibu", "sayang", "kakek"], correct: 0},
+        {id: 9, text: "Ibu ......", options: ["妈妈 mā ma", "爸爸 bà ba", "妹妹 mèi mei", "哥哥 ɡē ɡe"], correct: 0},
+        {id: 10, text: "Ini ......", options: ["这 zhè", "那 nà", "爱 ài", "看 kàn"], correct: 0},
+        {id: 11, text: "Itu ......", options: ["那 nà", "这 zhè", "爱 ài", "看 kàn"], correct: 0},
+        {id: 12, text: "Dokter ......", options: ["医生 yī shēnɡ", "老师 lǎo shī", "警察 jǐnɡ chá", "商人 shānɡ rén"], correct: 0},
+        {id: 13, text: "弟弟 dì di ......", options: ["adik laki-laki", "kakak laki-laki", "adik perempuan", "kakak perempuan"], correct: 0},
+        {id: 14, text: "Pekerja ......", options: ["工人 ɡōnɡ rén", "学生 xué shenɡ", "老师 lǎo shī", "商人 shānɡ rén"], correct: 0},
+        {id: 15, text: "Pengusaha/pedagang ......", options: ["商人 shānɡ rén", "学生 xué shenɡ", "工人 ɡōnɡ rén", "警察 jǐnɡ chá"], correct: 0},
+        {id: 16, text: "叫 jiào ......", options: ["memanggil / bernama", "berumur", "nama keluarga", "nama"], correct: 0},
+        {id: 17, text: "名字 mínɡ zi ......", options: ["nama", "umur", "nama keluarga", "memanggil / bernama"], correct: 0},
+        {id: 18, text: "Marga / nama keluarga ......", options: ["姓 xìnɡ", "叫 jiào", "岁 suì", "几 jǐ"], correct: 0},
+        {id: 19, text: "哥哥 ɡē ɡe ......", options: ["kakak laki-laki", "adik laki-laki", "kakak perempuan", "adik perempuan"], correct: 0},
+        {id: 20, text: "Kakak perempuan ......", options: ["姐姐 jiě jie", "哥哥 ɡē ɡe", "弟弟 dì di", "妹妹 mèi mei"], correct: 0},
+        {id: 21, text: "家 jiā ......", options: ["keluarga / rumah", "ayah", "nenek", "sayang"], correct: 0},
+        {id: 22, text: "Ada / punya ......", options: ["有 yǒu", "这 zhè", "爱 ài", "是 shì"], correct: 0},
+        {id: 23, text: "爷爷 yé ye ......", options: ["kakek", "nenek", "paman", "bibi"], correct: 0},
+        {id: 24, text: "Nenek ......", options: ["奶奶 nǎi nai", "爷爷 yé ye", "叔叔 shū shu", "姑姑 ɡū ɡu"], correct: 0},
+        {id: 25, text: "爱 ài ......", options: ["sayang", "laut", "bunga", "keluarga"], correct: 0},
+		{id: 26, text: "我爱爸爸 ........... ( mā ma ) 。", options: ["妈妈", "爸爸", "姐姐", "妹妹"], correct: 0},
+		{id: 27, text: "他是我 ........... ( bà ba ) 。", options: ["爸爸", "哥哥", "爷爷", "弟弟"], correct: 0},
+		{id: 28, text: "爸爸是 ........... ( lǎo shī ) 。", options: ["老师", "医生", "警察", "商人"], correct: 0},
+		{id: 29, text: "妈妈是 ........... ( yī shēnɡ ) 。", options: ["医生", "学生", "老师", "工人"], correct: 0},
+		{id: 30, text: "这是我的 ........... ( jiā ) 。", options: ["家", "书", "笔", "包"], correct: 0},
+		{id: 31, text: "nǐ jiào shén me mínɡ zi<br>你 叫 什 么 名 字 ？", options: ["Siapa nama kamu?", "Kamu berumur berapa tahun?", "Apakah kamu mempunyai buku?", "Ini buku siapa?"], correct: 0},
+		{id: 32, text: "wǒ ài wǒ de jiā<br>我 爱 我 的 家 。", options: ["Saya sayang keluarga saya.", "Saya sayang ayah.", "Saya sayang ibu.", "Keluarga saya ada 5 orang."], correct: 0},
+		{id: 33, text: "zhè shì wǒ mèi mei<br>Ini adalah adik perempuan saya.", options: ["这是我妹妹。", "那是我妹妹。", "这是我姐姐。", "那是我姐姐。"], correct: 0},
+		{id: 34, text: "wǒ shì xué shenɡ<br>Saya adalah murid.", options: ["我是学生。", "他是老师。", "我是医生。", "他是商人。"], correct: 0},
+		{id: 35, text: "zhè shì wǒ mā ma<br>Ini adalah ibu saya.", options: ["这是我妈妈。", "那是我妈妈。", "这是我妹妹。", "那是我姐姐。"], correct: 0}
     ];
 
-    let currentQuestions = [];      // 存储 shuffle 之后带 shuffledOptions & shuffledCorrect 的题目
-    let userAnswers = {};           // key: 原始id, value: 选项索引(针对shuffled)
+    let currentQuestions = [];
+    let userAnswers = {};
     let isCheckingAnswers = false;
 
-    // Fisher-Yates 洗牌
     function shuffleArray(arr) {
         for (let i = arr.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -466,7 +467,6 @@
         return arr;
     }
 
-    // 初始化/重置考试: 随机打乱题目顺序 + 每个题目选项乱序
     function initExam() {
         userAnswers = {};
         isCheckingAnswers = false;
@@ -474,10 +474,8 @@
         if (!container) return;
         container.innerHTML = '';
 
-        // 深拷贝原始题目并打乱题目顺序
         let shuffledQuestions = shuffleArray([...rawQuestions.map(q => ({ ...q }))]);
 
-        // 对每个题目，打乱选项顺序并记录新的正确下标
         currentQuestions = shuffledQuestions.map(q => {
             const optWithOrigIdx = q.options.map((opt, idx) => ({ text: opt, origIdx: idx }));
             const shuffledOpts = shuffleArray([...optWithOrigIdx]);
@@ -495,7 +493,6 @@
         updateProgressBar();
     }
 
-    // 渲染题目（支持<br>内嵌）
     function renderQuestions(questions) {
         const container = document.getElementById('questions-container');
         container.innerHTML = '';
@@ -504,7 +501,6 @@
             const qDiv = document.createElement('div');
             qDiv.className = 'question';
             const displayNumber = idx + 1;
-            // 题目文本保留原有HTML（如<br>标签）
             const titleHtml = `<div class="question-title"><span class="q-num">${displayNumber}</span><span>${question.text}</span></div>`;
             const optionsHtml = question.shuffledOptions.map((opt, optIdx) => {
                 return `<li class="option" data-qid="${question.id}" data-val="${optIdx}">${opt}</li>`;
@@ -513,7 +509,6 @@
             container.appendChild(qDiv);
         });
 
-        // 事件委托处理点击
         if (window._optionHandler) {
             container.removeEventListener('click', window._optionHandler);
         }
@@ -525,7 +520,6 @@
             const val = parseInt(optionEl.getAttribute('data-val'));
             if (isNaN(qid) || isNaN(val)) return;
 
-            // 移除同题目其他选项高亮
             const parentOptions = optionEl.parentElement.querySelectorAll('.option');
             parentOptions.forEach(opt => {
                 opt.classList.remove('selected');
@@ -546,7 +540,6 @@
         if (progressEl) progressEl.style.width = `${percent}%`;
     }
 
-    // 提交并批改
     function submitExam() {
         if (isCheckingAnswers) return;
         const totalQ = currentQuestions.length;
@@ -586,7 +579,6 @@
         resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    // 高亮正确与错误答案
     function highlightAnswers() {
         isCheckingAnswers = true;
         currentQuestions.forEach(q => {
@@ -606,24 +598,21 @@
                 }
             });
         });
-        // 禁用点击修改
         document.querySelectorAll('.option').forEach(opt => {
             opt.style.cursor = 'default';
         });
     }
 
-    // 重试刷新全部
     function retryExam() {
         isCheckingAnswers = false;
         const resultDiv = document.getElementById('result');
         if (resultDiv) resultDiv.style.display = 'none';
         userAnswers = {};
-        initExam();   // 重新生成顺序与选项乱序
+        initExam();
         updateProgressBar();
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // 绑定按钮事件
     document.addEventListener('DOMContentLoaded', () => {
         initExam();
         const submitBtn = document.getElementById('submit-btn');
